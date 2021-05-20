@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM is loaded");
 
     initTopCanvas();
-    initRRTCanvas();
 });
 
 // ===== Mouse movement stuff =====
@@ -40,7 +39,7 @@ function initTopCanvas(){
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
 
-    system = cartpole;
+    system = rocket;
 
     animate();
 }
@@ -54,11 +53,4 @@ function animate(){
     system.sim(0.02);
 
     requestAnimationFrame(animate);
-}
-
-
-
-// ===== RRT Canvas stuff =====
-function initRRTCanvas(){
-    
 }

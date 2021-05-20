@@ -1,13 +1,4 @@
 
-
-// Generates a random sample from a given space.
-// accepts a "bounds" input as follows:
-// {xmin: -, xmax: -, ymin: -, ymax: -}
-function rand2D(bounds){
-
-    return Point(0, 0);
-};
-
 class Point{
     constructor(x, y) {
         this.x = x;
@@ -27,7 +18,7 @@ class Point{
 
     equals(pointB){
         //return this.x == pointB.x && this.y - pointB.y;
-        return Math.abs(this.x - pointB.x) < 0.000001 && Math.abs(this.x - pointB.x) < 0.000001;
+        return Math.abs(this.x - pointB.x) == 0 && Math.abs(this.y - pointB.y) == 0;
     }
 }
 
@@ -321,7 +312,8 @@ class RRT{
     findParentBranch(node){
         let parentBranch;
         this.tree.forEach( (branch) => {
-            if(branch.end.equals(node) && !branch.end.equals(branch.start)){
+            // !branch.end.equals(branch.start)
+            if(branch.end.equals(node)){
                 parentBranch = branch;
             }
         })
@@ -337,7 +329,13 @@ class RRT{
         let count = 0;
         while(!parentStart.equals(this.start)){
             let parentBranch = this.findParentBranch(parentStart);
-            parentStart = parentBranch.start;
+            try{
+                parentStart = parentBranch.start;
+            }catch (e){
+                console.log(this.findClosestNode(parentStart));
+                console.log(parentStart);
+                console.error(e);
+            }
             branches.push(parentBranch);
 
             count ++;
@@ -396,7 +394,7 @@ class RRT{
         }
 
         // Set a min length
-        if(treeBranch.getLength() > 5){
+        if(treeBranch.getLength() > 0.01){
             // Extend tree
             this.tree.push(treeBranch);
             this.nodes.push(treeBranch.end);
