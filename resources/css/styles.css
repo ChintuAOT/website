@@ -1,4 +1,4 @@
-html, body {margin:0;padding:0;height:100%;}
+html, body {margin:0;padding:0;height:100%; background-color: #0f0f14;}
 
 
 .full-screen-canvas{
@@ -7,7 +7,7 @@ html, body {margin:0;padding:0;height:100%;}
 }
 
 .full-screen{
-    height: 100%;
+    min-height: 100%;
     width: 100%;
 
     display: flex;
@@ -23,12 +23,11 @@ html, body {margin:0;padding:0;height:100%;}
 
 .get-in-touch{
     width: 700px;
-    height: 600px;
+    height: 520px;
     background: linear-gradient(124.64deg, #8C66FF 5.22%, #00CAC3 90.07%);
 }
 
 h1{
-    margin: 0px;
 
     text-align: center;
   
@@ -60,8 +59,7 @@ h1.subtitle{
     line-height: 32px;
     text-align: justify;
 
-    color: #1F1F1F;
-    color: #a7a7a7;
+    color: white;
 }
 
 h2{
@@ -70,10 +68,14 @@ h2{
     font-family: Roboto Mono;
     font-style: normal;
     font-weight: bold;
-    font-size: 75px;
-    line-height: 99px;
+    font-size: 65px;
+    line-height: 70px;
   
     color: white;
+}
+
+h2.dark{
+    color: black;
 }
 
 p{
@@ -81,8 +83,62 @@ p{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 26px;
 
     color: #FFFFFF;
+}
+
+p.dark{
+    color: black;
+}
+
+div.mid{
+    width: 750px;
+    margin: 0;
+    padding: 0;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+div.light{
+    background-color: #F5F2F2;
+}
+
+div.white{
+    background-color: white;
+}
+
+
+/* Project */
+
+.project-list{
+    margin-left: 40px;
+    margin-right: 40px;
+
+    width: 800px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-bottom: 100px;
+}
+
+.project{
+    overflow: hidden;
+
+    flex-grow: 1;
+  
+    width: 300px;
+    padding: 0px;
+  
+    margin: 10px;
+}
+
+.project-image{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
 }

@@ -45,8 +45,8 @@ function initCanvas(){
     // poly.drawFill(ctx, "grey");3
     tree = new RRT([new Point(25, 25), new Point(canvas.width-25, canvas.height-25)], new Point(100, canvas.height/2), new Point(canvas.width - 100, canvas.height/2));
     
-    tree.maxLength = 10;
-    tree.goalProb = 0.01;
+    tree.maxLength = 30;
+    tree.goalProb = 0.005;
 
     let width = 720;
     let height = 620;
@@ -76,14 +76,14 @@ function sample(){
 
         tree.sample();
         tree.sample();
-        tree.sample();
-        tree.sample();
-        tree.sample();
+        //tree.sample();
+        //tree.sample();
+        //tree.sample();
         //tree.sampleUntilFinish(1000);
 
         // Redraw tree
         let grey = "grey";
-        tree.drawAllBranches(ctx, 3, grey);
+        tree.drawAllBranches(ctx, 2, grey);
         tree.drawAllNodes(ctx, 1, grey);
 
         tree.start.draw(ctx, 10, grey);
