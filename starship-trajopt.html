@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="resources/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700,400|Roboto:400i,400,100i,700,900|Dosis:500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class = "article-container light">
+        <div class = "mid">
+            <a href = "javascript: window.history.back();"><h3 class = "dark">(back)</h3></a>
+            <h2 class = "dark">Starship Landing Trajectory Optimization</h2>
+            <br><br>
+
+            <iframe class = "midvid" width="800" height="460" src="https://www.youtube.com/embed/6qj3EfRTtkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <br><br>
+            
+            <p class = "dark">One of my most favourite projects has been building out my own non-linear trajectory optimization tool. Given the amazing existing optimization libraries (namely CASADI and Ipopt) this is fairly straightforward to do. I initially experimented with single degree of freedom systems and have slowly moved my way up the non-linearity / underactuation food chain to flying machines (next up is walking robots!).
+            </p>
+
+            <h3 class = "dark">// Behind the Scenes</h3>
+            <p class = "dark">
+                After posting a clip of this to twitter, I decided to do a quick writeup to explain what was going on and the tools I used to achieve it. This took the form of a medium article. I find it very rewarding to attempt to explain topics in simple language, because it helps demystify what's going on for those not familiar with, and forces me to check if I actually know what is going on myself.
+            </p>
+
+            <h3 class = "dark">// Other Trajectory Optimization Tests</h3>
+            <p class = "dark">
+                Some early tests of my trajectory optimization setup:
+            </p>
+            <img src="resources\images\trajopt\pendswingup.gif" alt="an image lol">
+            <p class = "dark caption">Inverted Pendulum Swing-up</p>
+                
+            <img src="resources\images\trajopt\firstflip.gif" alt="an image lol">  
+            <p class = "dark caption">First working implementation of a 2D multirotor flip</p>
+
+            <img src="resources\images\droneflip.gif" alt="an image lol">
+            <p class = "dark caption">Revised 2D multirotor flip including extra cost on angular</p>
+
+            <h3 class = "dark">// Next Steps</h3>
+            <p class = "dark">
+                While cool animations are great, they are a long way away from being able to command a maneuver like this out of a physical system. <br><br>
+
+                Taking a trajectory and turning it into a set of linear feedback controllers is the next logical step, but requires a bit more framework to be implemented. I haven't yet figured out a nice, "elegant" way to generate and then implement a time varying LQR controller <br><br>
+
+                The other option is to run online optimization, resulting in an MPC controller. This could either be used to stabilize a non-linear system, with or without a pre-planned trajectory. This also requires more work than the pre-planning approach, as online optimization needs refinement and testing to make sure it is safe to run live on a physical system.  <br><br>
+
+                (the big next step is building something that can fly)
+            </p>
+
+            <a href = "javascript: window.history.back();"><h3 class = "dark">(back)</h3></a>
+        </div>
+    </div>
+</body>
