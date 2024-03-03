@@ -1,8 +1,10 @@
 import { Point, Line, Polygon, RRT} from './RRT.js';
 
-let canvas;
+let canvas, rrt_div;
 let ctx;
 let tree;
+
+let started = false;
 
 let interval;
 
@@ -18,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function initCanvas(){
     // Populates canvas var 
     canvas = document.getElementById("RRT-canvas");
+    rrt_div = document.getElementById("rrt-div");
     ctx = canvas.getContext("2d");
 
     // Set width and height
@@ -64,7 +67,20 @@ function initCanvas(){
 
     console.log(tree.done);
 
-    interval = setInterval(sample, 10);
+    sample();
+
+    rrt_div.addEventListener("mouseover", function(){
+        // setInterval(sample, 10);
+
+        if(!started){
+            console.log("starting RRT")
+            setInterval(sample, 10);
+        }
+
+        started = true;
+    });
+
+    //interval = setInterval(sample, 10);
 }
 
 function sample(){

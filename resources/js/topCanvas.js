@@ -44,13 +44,25 @@ function initTopCanvas(){
     animate();
 }
 
-let type = 'rocket';
+let type = 'cartpole';
 
-function animate(){
+let start;
+let prevElapsed = 0;
+
+function animate(timestamp){
+    if (start === undefined)
+        start = timestamp
+    const elapsed = timestamp - start;
+    let delta_s = (elapsed - prevElapsed) / 1000;
+
+    if(isNaN(delta_s)){
+        delta_s = 0;
+    }
 
     system.draw(ctx, canvas);
     system.controller([mouse.x/100, -mouse.y/100], canvas);
-    system.sim(0.02);
+    system.sim(delta_s*1.2);
 
+    prevElapsed = elapsed;
     requestAnimationFrame(animate);
 }

@@ -16,12 +16,14 @@
 
             <br><br>
             
-            <p class = "dark">One of my most favourite projects has been building out my own non-linear trajectory optimization tool. Given the amazing existing optimization libraries (namely CASADI and Ipopt) this is fairly straightforward to do. I initially experimented with single degree of freedom systems and have slowly moved my way up the non-linearity / underactuation food chain to flying machines (next up is walking robots!).
+            <p class = "dark">One of the most enjoyable tools I have learned recently is trajectory optimization. Given the amazing existing optimization libraries (namely CASADI and Ipopt) this has been fairly straightforward to do. I initially experimented with single degree of freedom systems and have slowly moved my way up the non-linearity / underactuated food chain to flying machines (next up is walking robots!). The clip above was made while waiting for starship SN15 to launch, I took some initial condition data from previous flights along with some estimated vehicle parameters and asked my optimization setup to land the rocket. After making a quick animation of the result, to my absolute amazement, it lined up nearly perfectly with a video of the actual landing from a previous flight.
             </p>
 
             <h3 class = "dark">// Behind the Scenes</h3>
             <p class = "dark">
                 After posting a clip of this to twitter, I decided to do a quick writeup to explain what was going on and the tools I used to achieve it. This took the form of a medium article. I find it very rewarding to attempt to explain topics in simple language, because it helps demystify what's going on for those not familiar with, and forces me to check if I actually know what is going on myself.
+                
+                <a href="https://thomas-godden.medium.com/how-spacex-lands-starship-sort-of-ee96cdde650b"> Medium Article Link </a>
             </p>
 
             <h3 class = "dark">// Other Trajectory Optimization Tests</h3>
@@ -35,7 +37,7 @@
             <p class = "dark caption">First working implementation of a 2D multirotor flip</p>
 
             <img src="resources\images\droneflip.gif" alt="an image lol">
-            <p class = "dark caption">Revised 2D multirotor flip including extra cost on angular</p>
+            <p class = "dark caption">Revised 2D multirotor flip including extra cost on angular velocity</p>
 
             <h3 class = "dark">// Next Steps</h3>
             <p class = "dark">
@@ -45,10 +47,10 @@
 
                 The other option is to run online optimization, resulting in an MPC controller. This could either be used to stabilize a non-linear system, with or without a pre-planned trajectory. This also requires more work than the pre-planning approach, as online optimization needs refinement and testing to make sure it is safe to run live on a physical system.  <br><br>
 
-                (the big next step is building something that can fly)
+                I have also been getting very tempted to build myself a thrust vectoring VTOL testbed.
             </p>
 
-            <a href = "javascript: window.history.back();"><h3 class = "dark">(back)</h3></a>
+            <a href = "javascript: window.history.back();"><h3 class = "dark"> > cd ..</h3></a>
         </div>
     </div>
 </body>

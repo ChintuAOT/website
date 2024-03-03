@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="resources/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700,400|Roboto:400i,400,100i,700,900|Dosis:500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class = "article-container white">
+        <div class = "mid">
+            <a href = "javascript: window.history.back();"><h3 class = "dark"> (back)</h3></a>
+            <h2 class = "dark">BLDC Driver Prototypes</h2>
+            <br><br>
+
+            <img src="resources\images\inverter\inverter2.PNG" alt="3 Phase inverter PCB layout">
+            <p class = "dark caption">Prototype IGBT module for rapid testing</p>
+
+            <h3 class = "dark">// Background</h3>
+            
+            <p class = "dark">As part of a college project, I led the development of an induction motor traction inverter. While the project was mostly cancelled due to covid, the original design lived on in the form of a very hacky brushless motor driver.
+            <br><br>
+            I have the layouts for a fully integrated stm32 BLDC ESC and need to find a spare weekend to sit down and release them for fab.
+            </p>
+
+            <h3 class = "dark">// Phase 1 - Breadboard Gates and Driver</h3>
+            <p class = "dark">After a lot of research and design, we decided the best way to proceed would to be by building smaller prototypes and working our way up in size and power. Our first prototype consisted of a full 3 phase inverter layed out on a breadboard. This has many limitations, namely: a very low current limit due to breadboard connections and bad analog signal performance.
+            </p>
+
+            <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/iJTtCyTL7zU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3 class = "dark">// Phase 2 - PCB IGBT Module</h3>
+            <p class = "dark">The next step was to get rid of the breadboard as that was the limiting factor in scaling up power tests. To gain experience with IGBTs, we decided to design our own first three phase half bridge gate module.
+
+            <br><br>
+
+            At this point the original project had stalled, but since I had these laying around. I went and implemented a basic FOC driver on an Arduino Uno and spun some brushless motors around (which, for some reason, worked far better than it should).
+            </p>
+
+            <img src="resources\images\inverter\inverter3.png" alt="3 Phase inverter PCB layout">
+            <p class = "dark caption">Prototype IGBT module for rapid testing</p>
+            
+            <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/BCkCC1rqXJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class = "dark caption">Running the brushless motor using the custom board in a sensored setup</p>
+
+            <p class = "dark">This is only the beginning and I am very excited to (safely) dive into the world of high power electronics and control.
+            </p>
+
+            <a href = "javascript: window.history.back();"><h3 class = "dark"> > cd ..</h3></a>
+        </div>
+    </div>
+</body>

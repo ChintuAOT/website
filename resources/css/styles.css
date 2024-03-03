@@ -2,11 +2,14 @@ html, body {margin:0;padding:0;height:100%; background-color: #0f0f14;}
 
 
 .full-screen-canvas{
+    position: relative;
     height: 100%;
     width: 100%;
 }
 
 .full-screen{
+    position: relative;
+
     min-height: 100%;
     width: 100%;
 
@@ -70,6 +73,10 @@ h1.subtitle{
     color: white;
 }
 
+h1.dark{
+    color:black;
+}
+
 h2{
     margin-top: 80px;
     margin-right: 40px;
@@ -86,6 +93,10 @@ h2{
 
 h2.dark{
     color: black;
+}
+
+h2.lessmargin{
+    margin-top: 40px;
 }
 
 h3{
@@ -172,6 +183,13 @@ div.white{
     padding: 0px;
   
     margin: 10px;
+
+    filter: drop-shadow(0 0 0.2em rgba(0,0,0,0.5));
+    transition: filter .5s ease-in-out;
+}
+
+.project:hover{
+    filter: drop-shadow(0 0 1.2rem rgba(0,0,0,0.5)); 
 }
 
 .project-image{
@@ -180,23 +198,23 @@ div.white{
     max-width: 100%;
     max-height: 100%;
 
-    -webkit-filter: grayscale(0) blur(0);
-    filter: grayscale(0) blur(0);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
 
 .project:hover .project-image{
-    -webkit-filter: grayscale(0) blur(2px);
-    filter: grayscale(0) blur(2px);
+    -webkit-filter: blur(0px);
+    filter:blur(0px);
 }  
 
 .project:hover .project-title {
-    opacity: 1;
+    opacity: 0;
 }
 
 .project-title {
-    opacity: 0;
+    opacity: 1;
 
     position: absolute;
     left: 0px;
@@ -224,4 +242,48 @@ img{
 
     font-family: Roboto Mono;
     font-size: 14px;
+}
+
+.button {
+    background-color: none; /* Green */
+    border: 2px solid white;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    font-family: Roboto Mono;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px; 
+
+    margin-left: 40px;
+
+    filter: drop-shadow(0 0 0rem rgba(255, 255, 255, 0.0));
+
+    transition: background-color, color, filter;
+    /* transition-timing-function: cubic-bezier( 0, 0.95, 0.32, 0.85 ) ; */
+    transition-duration: 0.4s;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+    filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.4));
+}
+
+
+#rrt{
+    position: absolute;
+
+    font-size: 14px;
+    color:rgba(30, 30, 30, 0.5);
+
+    font-weight: bold;
+
+    bottom: 0;
+    left: 0;
 }

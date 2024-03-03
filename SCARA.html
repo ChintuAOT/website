@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
   <link rel="stylesheet" href="resources/css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700,400|Roboto:400i,400,100i,700,900|Dosis:500&display=swap" rel="stylesheet">
 </head>
@@ -12,13 +13,13 @@
             <h2 class = "dark">3D Printed SCARA Arm</h2>
             <br><br>
 
-            <img src="resources\images\scara\scara2.png" alt="Wireframe of the SCARA arm">
+            <img src="resources\images\scara\scara2.PNG" alt="Wireframe of the SCARA arm">
 
             <br><br>
 
             <h3 class = "dark">// Design</h3>
             
-            <p class = "dark">As a project to "break-in" a new CAD software I was trying out (onshape), I decided to finally build myself a robot arm. For simplicity and to lower power requirements, I decided to design a SCARA, "RR" style robot. This utilized very cheep parts that I already had lying around: skateboard bearings, steel tubes (from a curtain rod), NEMA 17 motors and GT2 timing belt. Another interesting design constraint was that it needed to be able to be packed into a suitcase, as I was moving back to the UK at the end of the summer.
+            <p class = "dark">As a project to "break-in" a new CAD software I was trying out (onshape), I decided to finally build myself a robot arm. For simplicity and to lower power requirements, I decided to design a SCARA, "RR" style robot. This utilized very cheap parts that I already had lying around: skateboard bearings, steel tubes (from a curtain rod), NEMA 17 motors and GT2 timing belt. Another interesting design constraint was that it needed to be able to be packed into a suitcase, as I was moving back to the UK at the end of the summer.
             </p>
 
             <img src="resources\images\scara\scara3.png" alt="Wireframe of the elbow joint">
@@ -30,7 +31,7 @@
             <p class = "dark">After many hours of printing, and a few sizing tweaks, I had a full arm built!
             </p>
 
-            [get image]
+            <img src="resources\images\scara\arm1.jpg" alt="Completed arm">
 
             <h3 class = "dark">// Software</h3>
             <p class = "dark">I wrote up a very quick arduino sketch to run the stepper drivers and python class to interface with the arm through serial and run the IK. I could then command the arm to locations and angles in python scripts.
@@ -42,7 +43,7 @@
 
             <h3 class = "dark">// Next Steps</h3>
             <p class = "dark">
-                There are two big next steps on this project that I will get around too when I have more time: Design a proper PCB so I can run the motors at the full 2 Amps the drivers support, and hook up a rapsberry pi running ROS and MoveIt! to achieve proper arm planning system.
+                There are two big next steps on this project that I will get around too when I have more time: Design a proper PCB so I can run the motors at the full 2 amps the drivers support, and hook up a rapsberry pi running ROS and MoveIt! to get a proper trajectory planning system.
 
                 <br><br>
 
@@ -51,7 +52,7 @@
                 I am also very tempted to redesign the motor pods to support BLDC motors.
             </p>
 
-            <a href = "javascript: window.history.back();"><h3 class = "dark">(back)</h3></a>
+            <a href = "javascript: window.history.back();"><h3 class = "dark"> > cd ..</h3></a>
         </div>
     </div>
 </body>

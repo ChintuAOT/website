@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="resources/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700,400|Roboto:400i,400,100i,700,900|Dosis:500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class = "article-container light">
+        <div class = "mid">
+            <a href = "javascript: window.history.back();"><h3 class = "dark">(back)</h3></a>
+            <h2 class = "dark">Sim-to-Real Bipedal Walking Policy</h2>
+            <br><br>
+
+            <iframe class = "midvid" width="800" height="460" src="https://www.youtube-nocookie.com/embed/iXnwbxDJJjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <br><br>
+            <p class = "dark">For my final year masters project at Imperial, I decided to tackle a dynamics problem that I'd been thinking about for a while; dynamic walking. This project coupled together some sub-projects that were interesting to solve on their own: "high" dof joint control, proprioceptive state estimation, system id and reinforcement learning.
+                <br><br>
+                I specifically chose to do reinforcement learning, not because I think that end-to-end RL is the "correct" approach, but because it was something I wanted to learn. I personally believe that mixed model based and model free approaches are going to become more prevalent.
+                <br><br>
+                Due to the robot having significant mechanical issues, I wasn't able to fully realize the ability of my controller on hardware, but I am still pretty happy with the result.
+                <br><br>
+                You can read my full report here which contains more technical details: <a href="/resources/DE_Masters_Thesis_2023_01766999_ThomasGodden.pdf">DE_Masters_Thesis_2023</a>
+            </p>
+
+            <h3 class = "dark">// Control Hierarchy</h3>
+            <p class = "dark">
+                
+            </p>
+
+            <img src="resources/images/slider-rl/full_system.png" alt="Full systems diagram">  
+            <p class = "dark caption">The complete control block diagram of the system. Most blocks correspond to ROS 2 nodes</p>
+
+
+            <h3 class = "dark">// Results</h3>
+            <img src="resources/images/slider-rl/impulse-rejection.png" alt="Impulse rejection">  
+            <p class = "dark caption">Disturbance rejection in sim</p>
+
+            <iframe class = "midvid" width="800" height="460" src="https://www.youtube-nocookie.com/embed/h4cp-HBTgtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class = "dark caption">A collection of several minute of real world walking</p>
+
+            <iframe class = "midvid" width="800" height="460" src="https://www.youtube-nocookie.com/embed/yER3Q2RJtDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe class = "midvid" width="800" height="460" src="https://www.youtube-nocookie.com/embed/MAmdfZ_hH9o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+
+            <a href = "javascript: window.history.back();"><h3 class = "dark"> > cd ..</h3></a>
+        </div>
+    </div>
+</body>

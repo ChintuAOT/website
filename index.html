@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
   <link rel="stylesheet" href="resources/css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700,400|Roboto:400i,400,100i,700,900|Dosis:500&display=swap" rel="stylesheet">
 </head>
@@ -18,9 +19,9 @@
     <div class = "article-container light">
         <div class = "mid">
             <h2 class = "dark">Me</h2>
-            <p class = "dark">I'm Thomas Godden, a second year Design Engineering student at Imperial College London with an extensive background in competitive robotics, as well as work experience in mechanical engineering and systems engineering. <br><br>
+            <p class = "dark">I'm Thomas Godden, a mechanical engineer with an extensive background in competitive robotics, work experience in mechanical and systems engineering and research experience in robot locomotion. I currently build robots for <a href="https://www.pipedreamlabs.co/" target="_blank">Pipedream Labs</a> in Texas, and went to school at Imperial College London.<br><br>
 
-            I love to work on complex, high power or moonshot problems, particularly ones involving autonomous systems with interesting planning, dynamics and control. <br><br>
+            I like to work on complex, high power and/or moonshot problems, particularly ones involving autonomous systems with interesting planning, dynamics and control. <br><br>
                 
             Scroll down to see some of my projects, or jump straight to my contact info.
             </p>
@@ -32,6 +33,10 @@
             <h2 class = "dark">Projects</h2>
             <p class = "dark">A few of my favourite things I have worked on recently.</p>
             <div class = "project-list">
+                <a href="/slider.html" class = "project">
+                    <img src="resources\images\slider-rl.png" alt="an image lol" class="project-image">
+                    <h3 class="project-title dark">Sim-to-Real Bipedal Walking Policy</h3>
+                </a>
 
                 <a href="/starship-trajopt.html" class = "project">
                     <img src="resources\images\trajopt.PNG" alt="an image lol" class="project-image">
@@ -50,7 +55,12 @@
 
                 <a href="/inverter.html" class = "project">
                     <img src="resources\images\inverter.jpg" alt="an image lol" class="project-image">
-                    <h3 class="project-title">Hyperloop Inverter</h3>
+                    <h3 class="project-title">BLDC Driver Prototypes</h3>
+                </a>
+
+                <a href="/pycalc.html" class = "project">
+                    <img src="resources\images\pycalc.png" alt="an image lol" class="project-image">
+                    <h3 class="project-title">Live Python Calculator</h3>
                 </a>
             </div>
         </div>
@@ -59,29 +69,34 @@
     <div class = "article-container dark">
         <div class = "mid">
             <h2 class = "light">Skills</h2>
-            <p class = "light">Nonlinear control • System dynamics • Power electronics • Motor drive • Optimal control • Trajectory optimization • Motion planning • Path planning • Rapid prototyping • Embedded systems development • Computer vision • Mobile robots <br><br>
+            <p class = "light">Mechatronics design • Dynamics and modeling • Optimal control • Trajectory optimization • Reinforcment learning • The usual assortment of machine tools • Embedded systems • Motor drive • FEA / CFD <br><br>
 
-            Python • C & C++ • Julia • Java • Javascript • MATLAB + Simulink • Git • ROS <br><br>
+            Python • C • Julia • Javascript • ROS • drake • MuJoCo <br><br>
                 
-            Onshape • Solidworks • CREO • Eagle • KiCAD <br><br>
+            Onshape • Solidworks • CREO • KiCAD <br><br>
             </p>
+
+            <a class = "button" href="/resources/files/Thomas Godden - Resume 2021.pdf">Resume</a>
         </div>
     </div>
 
-    <div class = "full-screen top">
+    <div class = "full-screen top" id='rrt-div'>
         <div class = "get-in-touch">
-            <h2>Reach <br> Out</h2>
+            <h2 class = "lessmargin">Reach <br> Out</h2>
             <p class = "light">
                 I would love to get in touch if you have questions about something I have done, or an interesting project you think I might enjoy.
-            </p>
+            </p> <br><br>
 
-            <a href="https://twitter.com/GoddenThomas"> <p>Email</p> </a>
-            <a href="https://linkedin.com/in/thomas-godden"> <p>Linkedin</p> </a>
-            <a href="https://twitter.com/GoddenThomas"> <p>Twitter</p> </a>
+            <a class = "button" href="mailto:thomas.godden@outlook.com?subject=Hello!"> Email </a>
+            <a class = "button" href="https://linkedin.com/in/thomas-godden"> Linkedin </a>
+            <a class = "button" href="https://twitter.com/GoddenThomas"> Twitter</a>
         </div>
     </div>
-
-    <canvas class = "full-screen-canvas" id="RRT-canvas"></canvas>
+    
+    <div class = 'full-screen'>
+        <canvas class = "full-screen-canvas" id="RRT-canvas"></canvas>
+        <p id = "rrt" class = "dark">(RRT Path Planning)</p>
+    </div>
 </body>
 
 <script src = "resources/js/topCanvas.js" type="module"></script>
