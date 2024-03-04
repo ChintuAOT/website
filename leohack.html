@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="resources/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700,400|Roboto:400i,400,100i,700,900|Dosis:500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class = "article-container white">
+        <div class = "mid">
+            <a href = "/"><h3 class = "dark"> (back)</h3></a>
+            <h2 class = "dark">LeoHack Satellite Simulator Robots</h2>
+            <br><br>
+
+            <img src="resources\images\leohack\sat-sims.jpg" alt="an image lol">
+            <p class = "dark caption">Finished robot and un-capped test bot</p>
+
+            
+            
+            <p class = "dark">As part of a hardware hackathon I helped organize jointly with the Robotics and Space Societies at Imperial, I designed built a couple 3dof satellite simulators. These were designed to allow teams to design and mount docking adaptors as well as write a basic docking routine. There were some suprisingly clever solutions that came out of the hackathon, my favorite being a DIY electromagnet powered by a 9V.
+            </p>
+
+            <iframe class = "midvid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/MrvX0vOtH-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class = "dark caption">A recap video I produced showing the sims in use</p>
+
+            <p class = "dark">
+                The robots themselves were 3-wheel omni holonomic drivebases with low level control being performed on a rpi-pico and high level comms being run by a normal rpi. Satellite state was tracked using april tags on the sides.
+
+                This was the first time I had to build multible of the same robot, so was a fun experience in having to deal with the consequences of design mistakes at "scale" (very small scale admittedly).
+            </p>
+
+
+            <iframe class = "midvid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/qL9lRKzUO2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class = "dark caption">Early test of world centric driving (decoupled rotation and translation)</p>
+            
+            <a href = "/"><h3 class = "dark">> cd ..</h3></a>
+        </div>
+    </div>
+</body>

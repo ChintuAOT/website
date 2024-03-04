@@ -20,30 +20,6 @@
             Over a holiday weekend in 2023, I caught the multi-link robot bug again and had the idea to build a half-scale version of Boston Dynamics' Handle robot. I had been looking for something more interesting to do with my custom actuators than just an arm or a robot dog (seems like everyone is building their own these days). Handle has long been my favorite robot for a couple reasons and the wheeled-legged nature of it's design means controls are fairly reasonable. The superficial goal for this project is to do a shot-by-shot remake of the original BD video.
             </p>
 
-            <h3 class = "dark">// Actuators</h3>
-            <br>
-            <img src="resources\images\half-scale-handle\actuator-image.jpg" alt="Arm CAD">
-            <p class = "dark caption">Two assembled V1 actuators</p>
-
-            <p class = "dark">
-            The inception point for this project was wanting to design my own QDD actuator, then shortly after, wanting a more complete project to motivate me and force some requirements. If I was going for pure performance and dev speed I would shell out a few more hundred dollars for a COTS mini-cheetah actuator clone, or do a driver swap on something cheaper, but that wouldn't be as fun and I would learn far less.
-            </p>
-
-            <img src="resources\images\half-scale-handle\exploded-view.jpg" alt="Arm CAD">
-            <p class = "dark caption">Exploded cad for V2 of the actuator</p>
-            <br>
-
-            <p class = "dark">
-            The main unique design point behind these actuators is using a 3D printed ring gear. This cuts out a large amount of cost while allowing for a more integrated design. I ran a few FEA sims assuming solid nylon and was fairly impressed at the performance. There are multiple teeth meshed per planet on the ring gear so the resulting force per tooth ends up being pretty reasonable. There are obviously wear concerns, but I have not seen any noticeable degradation and the nature of hobby projects means I might not run them enough to reach that point. 
-            </p>
-
-            <img src="resources\images\half-scale-handle\gear-train-fea.png" alt="Gear train FEA sim">
-            <p class = "dark caption">Static simulation of the tooth forces on the ring gear</p>
-
-            <iframe class = "midvid" width="800" height="460" src="https://www.youtube-nocookie.com/embed/dd_iTJUYQvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class = "dark caption">Current-limited backdrivability testing</p>
-
-
             <h3 class = "dark">// Arm development</h3>
             <br>
 
@@ -51,11 +27,14 @@
             <p class = "dark caption">Rough arm CAD</p>
 
             <p class = "dark">
-            My first hardware goal is building the arm as it is a mostly self-contained project. I have completed the first two links + actuators and have run rough position control. I have yet to implement a proper velocity control loop on the drivers so there is no controlled damping and therefore movement is still a bit jumpy. I am close to adding the wrist and suction gripper and beginning to do some manipulation testing. The actuators seem to work fairly well and I haven't seen any degradation using the printed ring gear yet.
+            My first hardware goal is building the arm as it is a mostly self-contained project. I have completed the first two links + actuators and have run rough position control. I am close to adding the wrist and suction gripper and beginning to do some manipulation testing. Since the arm doesn't have any crazy singularities or self-collisions to plan around, I am tempted to write my own path planner and controller. The actuators seem to be working fairly well and I haven't seen any degradation using the printed ring gear.
             </p>
 
             <iframe class = "midvid" width="800" height="460" src="https://www.youtube-nocookie.com/embed/ES5yfcVduVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p class = "dark caption">Slow sine position goals on arm.</p>
+
+            <iframe class = "midvid" width="800" height="460" src="https://www.youtube-nocookie.com/embed/o5BlzCOXP7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class = "dark caption">Quicker trapezoidal moves.</p>
 
 
             <h3 class = "dark">// Perception</h3>
